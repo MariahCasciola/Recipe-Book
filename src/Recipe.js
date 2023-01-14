@@ -18,10 +18,10 @@ function Recipe({ recipes, recipe, setRecipes }) {
       <td>
         <img src={recipe.photo} />
       </td>
-      <td>
+      <td className="content_td" >
         <p>{recipe.ingredients}</p>
       </td>
-      <td>
+      <td className="content_td">
         <p>{recipe.preparation}</p>
       </td>
       <td>

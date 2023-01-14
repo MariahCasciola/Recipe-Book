@@ -31,6 +31,7 @@ function RecipeCreate({ recipes, setRecipes }) {
               <label>
                 <input
                   name="name"
+                  placeholder="Name"
                   onChange={handleChange}
                   value={formState.name}
                 ></input>
@@ -40,6 +41,7 @@ function RecipeCreate({ recipes, setRecipes }) {
               <label>
                 <input
                   name="cuisine"
+                  placeholder="Cuisine"
                   onChange={handleChange}
                   value={formState.cuisine}
                 ></input>
@@ -49,6 +51,7 @@ function RecipeCreate({ recipes, setRecipes }) {
               <label>
                 <input
                   name="photo"
+                  placeholder="URL"
                   onChange={handleChange}
                   value={formState.photo}
                 ></input>
@@ -58,6 +61,7 @@ function RecipeCreate({ recipes, setRecipes }) {
               <label>
                 <textarea
                   name="ingredients"
+                  placeholder="Ingredients"
                   onChange={handleChange}
                   value={formState.ingredients}
                 />
@@ -67,6 +71,7 @@ function RecipeCreate({ recipes, setRecipes }) {
               <label>
                 <textarea
                   name="preparation"
+                  placeholder="Preparation"
                   onChange={handleChange}
                   value={formState.preparation}
                 />
