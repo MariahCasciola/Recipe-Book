@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function RecipeCreate({ recipes, setRecipes }) {
-//defaulting the form submitions to be empty strings 
+  //defaulting the form submitions to be empty strings
   const initialFormState = {
     name: "",
     cuisine: "",
@@ -11,14 +11,14 @@ function RecipeCreate({ recipes, setRecipes }) {
   };
   //creating a shallow copy of initial form state as to not mutate the variable initialFormState
   const [formState, setFormState] = useState({ ...initialFormState });
- //on the event that a new character is typed in each input, handleChange will be called     
+  //on the event that a new character is typed in each input, handleChange will be called
   const handleChange = ({ target }) => {
     setFormState({ ...formState, [target.name]: target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setRecipes([...recipes, formState])
+    setRecipes([...recipes, formState]);
     setFormState({ ...initialFormState });
   };
 

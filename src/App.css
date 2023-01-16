@@ -9,11 +9,11 @@ label {
   padding: 10px;
 }
 
-input{
+input {
   width: 100%;
 }
 
-textarea{
+textarea {
   width: 100%;
 }
 
@@ -81,7 +81,7 @@ table tr td {
   width: 10%;
 }
 
-table tr td:nth-child(n+4):nth-child(-n+5) {
+table tr td:nth-child(n + 4):nth-child(-n + 5) {
   /* used background color to determine what this styling had affected */
   /* background-color: green; */
   width: 30%;

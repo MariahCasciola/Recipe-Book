@@ -1,7 +1,7 @@
 import React from "react";
 
 function Recipe({ recipes, recipe, setRecipes }) {
-//will filter through recipes that were created, and find the recipe that we want to delete, and provide us with the new list of recipes
+  //will filter through recipes that were created, and find the recipe that we want to delete, and provide us with the new list of recipes
   const handleDelete = () => {
     const filterRecipes = recipes.filter((element) => {
       return element !== recipe;
@@ -20,7 +20,7 @@ function Recipe({ recipes, recipe, setRecipes }) {
       <td>
         <img src={recipe.photo} />
       </td>
-      <td className="content_td" >
+      <td className="content_td">
         <p>{recipe.ingredients}</p>
       </td>
       <td className="content_td">
