@@ -1,12 +1,14 @@
 import React from "react";
 
 function Recipe({ recipes, recipe, setRecipes }) {
+//will filter through recipes that were created, and find the recipe that we want to delete, and provide us with the new list of recipes
   const handleDelete = () => {
     const filterRecipes = recipes.filter((element) => {
       return element !== recipe;
     });
     setRecipes(filterRecipes);
   };
+  //this is Recipe's output, it is the structure of each recipe that will be inside RecipeList's output
   return (
     <tr>
       <td>

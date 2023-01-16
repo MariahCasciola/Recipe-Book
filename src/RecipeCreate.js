@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function RecipeCreate({ recipes, setRecipes }) {
-  // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
+//defaulting the form submitions to be empty strings 
   const initialFormState = {
     name: "",
     cuisine: "",
@@ -9,9 +9,9 @@ function RecipeCreate({ recipes, setRecipes }) {
     ingredients: "",
     preparation: "",
   };
-  // TODO: Add the required input and textarea form elements.
+  //creating a shallow copy of initial form state as to not mutate the variable initialFormState
   const [formState, setFormState] = useState({ ...initialFormState });
-  // TODO: Add the required submit and change handlers
+ //on the event that a new character is typed in each input, handleChange will be called     
   const handleChange = ({ target }) => {
     setFormState({ ...formState, [target.name]: target.value });
   };
@@ -34,6 +34,7 @@ function RecipeCreate({ recipes, setRecipes }) {
                   placeholder="Name"
                   onChange={handleChange}
                   value={formState.name}
+                  required
                 ></input>
               </label>
             </td>
@@ -44,6 +45,7 @@ function RecipeCreate({ recipes, setRecipes }) {
                   placeholder="Cuisine"
                   onChange={handleChange}
                   value={formState.cuisine}
+                  required
                 ></input>
               </label>
             </td>
@@ -54,6 +56,7 @@ function RecipeCreate({ recipes, setRecipes }) {
                   placeholder="URL"
                   onChange={handleChange}
                   value={formState.photo}
+                  required
                 ></input>
               </label>
             </td>
@@ -64,6 +67,7 @@ function RecipeCreate({ recipes, setRecipes }) {
                   placeholder="Ingredients"
                   onChange={handleChange}
                   value={formState.ingredients}
+                  required
                 />
               </label>
             </td>
@@ -74,6 +78,7 @@ function RecipeCreate({ recipes, setRecipes }) {
                   placeholder="Preparation"
                   onChange={handleChange}
                   value={formState.preparation}
+                  required
                 />
               </label>
             </td>
